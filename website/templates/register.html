@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<hrml>
+<html>
     <head>
         <style>
             .register_button {
@@ -20,19 +20,26 @@
                 outline: none;
             }
 
-            button:hover {
+            .register_button:hover {
                 background-color: #23c483;
                 box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
                 color: #fff;
                 transform: translateY(-7px);
             }
 
-            button:active {
+            .register_button:active {
                 transform: translateY(-1px);
+            }
+            .col-md-6{
+                padding: 25px;
+                border-radius: 30px;
+                background: #fff;
+                box-shadow: 15px 15px 30px #000,
+                            -15px -15px 30px #000;
             }
         </style>
     </head>
-    <body>
+    <body style="background-color: #1e1e1e;"><br>
         <div class="col-md-6 offset-md-3">
             <h1><strong>Register</strong></h1><br>
             <form method="POST" action="">
@@ -50,9 +57,7 @@
                 {{ form.as_p }}
                 <button type="submit" class="register_button">Register</button>
             </form>
-        
-        
         </div>
     </body>
-</hrml>
+</html>
 {% endblock %}

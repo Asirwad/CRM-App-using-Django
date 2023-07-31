@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html>
+    <head>
+        <style>
+            .card {
+                position: relative;
+                width: 380px;
+                color: white;
+                height: 620px;
+                background: #444;
+                border-radius: 14px;
+            }
+
+            .bg {
+                position: absolute;
+                z-index: -1;
+                inset: -4px;
+                border-radius: 16px;
+                overflow: hidden;
+            }
+
+            .uwu {
+                filter: blur(8px);
+                transition: filter 0.3s;
+            }
+
+            .bg::before {
+                content: '';
+                position: absolute;
+                aspect-ratio: 1/1;
+                top: 50%;
+                left: 50%;
+                min-width: 150%;
+                min-height: 150%;
+                background-image: conic-gradient(
+                    hsl(0, 100%, 50%),
+                    hsl(30, 100%, 50%),
+                    hsl(60, 100%, 50%),
+                    hsl(90, 100%, 50%),
+                    hsl(120, 100%, 50%),
+                    hsl(150, 100%, 50%),
+                    hsl(180, 100%, 50%),
+                    hsl(210, 100%, 50%),
+                    hsl(240, 100%, 60%),
+                    hsl(270, 100%, 50%),
+                    hsl(300, 100%, 50%),
+                    hsl(330, 100%, 50%),
+                    hsl(360, 100%, 50%)
+                );
+                animation: speeen 4s linear infinite;
+                transform-origin: 0% 0%;
+                transform: rotate(0deg) translate(-50%, -50%);
+            }
+
+            @keyframes speeen {
+            from {
+                    transform: rotate(0deg) translate(-50%, -50%);
+            }
+
+            to {
+                    transform: rotate(360deg) translate(-50%, -50%);
+                }
+            }
+
+            .content {
+                position: relative;
+                padding: 14px 16px;
+            }
+
+            .img {
+                height: 10em;
+                width: 10em;
+                margin: auto;
+                background-color: #fff3;
+                border-radius: 2em;
+            }
+
+            .img svg {
+                height: 100%;
+                fill: white;
+            }
+
+            .content div {
+                text-align: center;
+            }
+
+            .h1 {
+                margin-top: 0.2em;
+                margin-bottom: 0.5em;
+                font-size: 2em;
+                font-weight: 600;
+            }
+
+            .p {
+                font-size: 1em;
+            }
+
+            .p p {
+                margin-top: 0.1em;
+                margin-bottom: 0.1;
+                padding: 0.5em;
+                background-color: #0003;
+                border-radius: 1em;
+                text-align: left;
+            }
+            .btn {
+                --width: 100px;
+                --height:28px;
+                --timing: 2s;
+                border: 0;
+                width: var(--width);
+                height: var(--height);
+                padding-block: 0.1em;
+                color: #fff;
+                font-weight: bold;
+                font-size: 1em;
+                background: rgb(64, 192, 87);
+                transition: all 0.2s;
+                border-radius: 3px;
+                }
+
+            .btn:hover {
+                background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+                animation: var(--timing) linear dance6123 infinite;
+                transform: scale(1.1) translateY(-1px);
+                }
+
+            @keyframes dance6123 {
+                to {
+                    background-position: var(--width);
+                }
+                }
+            .button {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: rgb(20, 20, 20);
+                border: none;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+                cursor: pointer;
+                transition-duration: .3s;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .svgIcon {
+                width: 12px;
+                transition-duration: .3s;
+            }
+
+            .svgIcon path {
+                fill: white;
+            }
+
+            .button:hover {
+                width: 100px;
+                border-radius: 50px;
+                transition-duration: .3s;
+                background-color: rgb(255, 69, 69);
+                align-items: center;
+            }
+
+            .button:hover .svgIcon {
+                width: 50px;
+                transition-duration: .3s;
+                transform: translateY(60%);
+            }
+
+            .button::before {
+                position: absolute;
+                top: -20px;
+                content: "Delete";
+                color: white;
+                transition-duration: .3s;
+                font-size: 2px;
+            }
+
+            .button:hover::before {
+                font-size: 13px;
+                opacity: 1;
+                transform: translateY(30px);
+                transition-duration: .3s;
+            }
+        </style>
+    </head>
+    <body style="background-color: #1e1e1e;"><br>
+        <div class="col-md-6 offset-md-4">
+            <div class="card">
+                <div class="bg uwu"></div>
+                <div class="bg"></div>
+                <div class="content">
+                    <div class="img">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path></svg>
+                    </div>
+                    <div class="h1">
+                        {{ customer_record.first_name }}&nbsp;{{ customer_record.last_name }}
+                    </div>
+                    <div class="p">
+                        <p>
+                            <strong>📧Email</strong>:&nbsp;&nbsp;{{ customer_record.email }}
+                        </p>                        
+                        <p>
+                            <strong>📞Phone</strong>:&nbsp;&nbsp;{{ customer_record.phone }}
+                        </p>
+                        <p>
+                            <strong>🏠Address</strong>:&nbsp;&nbsp;{{ customer_record.address }}
+                        </p>
+                        <p>
+                            <strong>🌆City</strong>:&nbsp;&nbsp;{{ customer_record.city }}
+                        </p>
+                        <p>
+                            <strong>🛣️State</strong>:&nbsp;&nbsp;{{ customer_record.state }}
+                        </p>
+                        <p>
+                            <strong>🔢Zipcode</strong>:&nbsp;&nbsp;{{ customer_record.zipcode }}
+                        </p>
+                        <a href="{% url 'home' %}" class="btn">Back</a>
+                        <a href="{% url 'home' %}" class="button">
+                            <svg viewBox="0 0 448 512" class="svgIcon">
+                                <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+{% endblock %}
