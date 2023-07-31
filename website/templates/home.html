@@ -3,9 +3,27 @@
 {% block content %}
 <html>
     <body>
-        <h1>
-            Hello world
-        </h1>
+        <div class="col-md-6 offset-md-3">
+            {% if user.is_authenticated%}
+                <h1>Hello World</h1>
+            {% else %}
+                <h1>User login</h1><br/>
+                <form method="POST" action="{% url 'home' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control"  name="user_name", placeholder="User name here" required>
+                        <div class="form-text">We'll never share your username with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control", name="password", placeholder="Case sensitive" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark">&nbsp;login&nbsp;</button>
+
+                </form>
+            {% endif%}
+        </div>
     </body>
 </html>
 {% endblock %}
