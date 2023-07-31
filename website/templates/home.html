@@ -2,6 +2,61 @@
 
 {% block content %}
 <html>
+    <head>
+        <style>
+           .cssbuttons-io-button {
+            background: #212529;
+            color: white;
+            font-family: inherit;
+            padding: 0.35em;
+            padding-left: 1.2em;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 0.9em;
+            border: none;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            box-shadow: inset 0 0 1.6em -0.6em #212529;
+            overflow: hidden;
+            position: relative;
+            height: 2.0em;
+            padding-right: 3.3em;
+          }          
+          .cssbuttons-io-button .icon {
+            background: white;
+            margin-left: 1em;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 1.6em;
+            width: 1.6em;
+            border-radius: 0.7em;
+            box-shadow: 0.1em 0.1em 0.6em 0.2em #212529;
+            right: 0.3em;
+            transition: all 0.3s;
+          } 
+          .cssbuttons-io-button:hover .icon {
+            width: calc(100% - 0.6em);
+          }
+          
+          .cssbuttons-io-button .icon svg {
+            width: 1.1em;
+            transition: transform 0.3s;
+            color: #212529;
+          }
+          
+          .cssbuttons-io-button:hover .icon svg {
+            transform: translateX(0.1em);
+          }
+          
+          .cssbuttons-io-button:active .icon {
+            transform: scale(0.95);
+          }
+          
+        </style>
+    </head>
     <body>
         <div class="col-md-6 offset-md-3">
             {% if user.is_authenticated%}
@@ -19,7 +74,11 @@
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" class="form-control", name="password", placeholder="Case sensitive" required>
                     </div>
-                    <button type="submit" class="btn btn-dark">&nbsp;login&nbsp;</button>
+                    <button class="cssbuttons-io-button"> Login
+                        <div class="icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                        </div>
+                    </button>
 
                 </form>
             {% endif%}
