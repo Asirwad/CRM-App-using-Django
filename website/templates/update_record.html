@@ -1,15 +1,24 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-
-<div class="col-md-6 offset-md-3">
-    <h1>Edit record</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-    <br>
-    <button type="submit" class="btn btn-secondary">Done</button>
-    </form>
-</div>
-
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/update_record.css' %}">
+    </head>
+    <body style="background-color: #1e1e1e;"><br><br>
+        <div class="col-md-6 offset-md-4">
+            <div class="card">
+                <div class="card-details">
+                    <p class="text-title">Edit record</p>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <br>
+                        <button type="submit" class="card-button">Done</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
 {% endblock %}

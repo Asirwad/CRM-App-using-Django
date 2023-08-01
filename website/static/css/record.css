@@ -1,0 +1,131 @@
+body {
+    background-image: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701691228.jpg");
+}
+.card {
+    position: relative;
+    width: 380px;
+    color: white;
+    height: 620px;
+    background: #444;
+    border-radius: 14px;
+}
+
+.bg {
+    position: absolute;
+    z-index: -1;
+    inset: -4px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.uwu {
+    filter: blur(8px);
+    transition: filter 0.3s;
+}
+
+.bg::before {
+    content: '';
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: 50%;
+    left: 50%;
+    min-width: 150%;
+    min-height: 150%;
+    background-image: conic-gradient(
+        hsl(0, 100%, 50%),
+        hsl(30, 100%, 50%),
+        hsl(60, 100%, 50%),
+        hsl(90, 100%, 50%),
+        hsl(120, 100%, 50%),
+        hsl(150, 100%, 50%),
+        hsl(180, 100%, 50%),
+        hsl(210, 100%, 50%),
+        hsl(240, 100%, 60%),
+        hsl(270, 100%, 50%),
+        hsl(300, 100%, 50%),
+        hsl(330, 100%, 50%),
+        hsl(360, 100%, 50%)
+    );
+    animation: speeen 4s linear infinite;
+    transform-origin: 0% 0%;
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+
+@keyframes speeen {
+from {
+        transform: rotate(0deg) translate(-50%, -50%);
+}
+
+to {
+        transform: rotate(360deg) translate(-50%, -50%);
+    }
+}
+
+.content {
+    position: relative;
+    padding: 14px 16px;
+}
+
+.img {
+    height: 10em;
+    width: 10em;
+    margin: auto;
+    background-color: #fff3;
+    border-radius: 2em;
+}
+
+.img svg {
+    height: 100%;
+    fill: white;
+}
+
+.content div {
+    text-align: center;
+}
+
+.h1 {
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.p {
+    font-size: 1em;
+}
+
+.p p {
+    margin-top: 0.1em;
+    margin-bottom: 0.1;
+    padding: 0.5em;
+    background-color: #0003;
+    border-radius: 1em;
+    text-align: left;
+}
+.btn {
+    --width: 100px;
+    --height:28px;
+    --timing: 2s;
+    border: 0;
+    width: var(--width);
+    height: var(--height);
+    padding-block: 0.1em;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    background: rgb(64, 192, 87);
+    transition: all 0.2s;
+    border-radius: 3px;
+    }
+
+.btn:hover {
+    background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+    animation: var(--timing) linear dance6123 infinite;
+    transform: scale(1.1) translateY(-1px);
+    }
+
+@keyframes dance6123 {
+    to {
+        background-position: var(--width);
+    }
+    }
