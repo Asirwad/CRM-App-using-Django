@@ -54,16 +54,79 @@
           .cssbuttons-io-button:active .icon {
             transform: scale(0.95);
           }
-          
+          .btn {
+            --main-focus: #2d8cf0;
+            --font-color: #dedede;
+            --bg-color-sub: #222;
+            --bg-color: #323232;
+            --main-color: #9f9f9f;
+            position: relative;
+            width: 150px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border: 2px solid var(--main-color);
+            box-shadow: 4px 4px var(--main-color);
+            background-color: var(--bg-color);
+            border-radius: 10px;
+            overflow: hidden;
+          }
+
+          .btn, .button__icon, .button__text {
+            transition: all 0.3s;
+          }
+
+          .btn .button__text {
+            transform: translateX(15px);
+            color: var(--font-color);
+            font-weight: 600;
+          }
+
+          .btn .button__icon {
+            position: absolute;
+            transform: translateX(95px);
+            height: 100%;
+            width: 39px;
+            background-color: var(--bg-color-sub);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .btn .svg {
+            width: 40px;
+            stroke: var(--main-color);
+          }
+
+          .btn:hover {
+            background: #222;
+          }
+
+          .btn:hover .button__text {
+            color: transparent;
+          }
+
+          .btn:hover .button__icon {
+            width: 148px;
+            transform: translateX(0);
+          }
+
+          .btn:active {
+            transform: translate(3px, 3px);
+            box-shadow: 0px 0px var(--main-color);
+          }
+          .record_h1_label {
+            color: white;
+          }
         </style>
     </head>
-    <body>
+    <body style="background-color: #323232;">
         <div>
             {% if user.is_authenticated%}
-                <br><h1>Records</h1><br>
+                <br><h1 class="record_h1_label">Records</h1><br>
 
                 <table class="table table-striped table-hover table-bordered ">
-                    <caption>List of customers</caption>
                     <thead class="table-dark">
                       <tr>
                         <th scope="col">ID</th>
@@ -96,7 +159,17 @@
                             {% endfor %}
                         {% endif %}
                     </tbody>
-                </table>
+                </table><br>
+                <!--Add record button-->
+                <a href="{% url 'add_record' %}" class="btn">
+                  <span class="button__text">Add Item</span>
+                  <span class="button__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
+                      <line y2="19" y1="5" x2="12" x1="12"></line>
+                      <line y2="12" y1="12" x2="19" x1="5"></line>
+                    </svg>
+                  </span>
+                </a>
             {% else %}
                 <div class="col-md-6 offset-md-3">
                     <br><h1>User login</h1><br/>
