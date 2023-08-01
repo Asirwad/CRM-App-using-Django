@@ -26,13 +26,6 @@ To get started with our project, follow these steps:
             </p>
         </td>
     </tr>
-    <tr>
-        <td>
-            <p align="center">
-              <img src="https://github.com/Asirwad/CRM-App-using-Django/assets/85600836/4d54dfd4-cdf7-4e27-a842-96c0a0d60fc4" alt="Project Logo" width="1000">
-            </p>
-        </td>
-    </tr>
   <tr>
     <td>
       <p align="center">
