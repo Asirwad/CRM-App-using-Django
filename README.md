@@ -17,6 +17,29 @@ To get started with our project, follow these steps:
 
 4. **Explore the Scripts**: Utilize the provided scripts `python manage.py runserver`.
 
+## Screenshots
+<p align="center">
+  <img src="https://github.com/Asirwad/CRM-App-using-Django/assets/85600836/4d54dfd4-cdf7-4e27-a842-96c0a0d60fc4" alt="Project Logo" width="1000">
+</p>
+<p align="center">
+  <img src="https://github.com/Asirwad/CRM-App-using-Django/assets/85600836/157cc890-b01f-4d23-92f4-fdef873a181f" alt="Project Logo" width="1000">
+</p>
+<p align="center">
+  <img src="https://github.com/Asirwad/CRM-App-using-Django/assets/85600836/ff8c771b-14e9-46a7-ae50-d2920de72eaa" alt="Project Logo" width="1000">
+</p>
+<p align="center">
+  <img src="https://github.com/Asirwad/CRM-App-using-Django/assets/85600836/fcc75cd5-97b3-4642-8cc7-2e5bd9563025" alt="Project Logo" width="1000">
+</p>
+<p align="center">
+  <img src="https://github.com/Asirwad/CRM-App-using-Django/assets/85600836/4b2a916b-afd6-4b1e-adf8-96f217ad3fa7" alt="Project Logo" width="1000">
+</p>
+<p align="center">
+  <img src="https://github.com/Asirwad/CRM-App-using-Django/assets/85600836/684ffd6e-082c-42f0-b01e-7c936488b327" alt="Project Logo" width="1000">
+</p>
+
+
+
+
 ## Contributing
 
 We welcome contributions from the open source community. If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
