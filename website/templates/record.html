@@ -167,7 +167,7 @@
                             <strong>🔢Zipcode</strong>:&nbsp;&nbsp;{{ customer_record.zipcode }}
                         </p>
                         <a href="{% url 'home' %}" class="btn">Back</a>&emsp;
-                        <a href="#" class="btn">Edit</a>&emsp;
+                        <a href="{% url 'update_record' customer_record.id %}" class="btn">Edit</a>&emsp;
                         <a href="{% url 'delete' customer_record.id %}" class="btn">🚮Delete</a>&emsp;
                     </div>
                 </div>
